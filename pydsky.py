@@ -261,7 +261,7 @@ class DSKY(QMainWindow):
         b = Button(self)
         b.setFixedSize(63, 63)
         b.move(x, y)
-        b.setStyleSheet('QPushButton{background-color: rgba(0,0,0,0);}')
+        b.setStyleSheet('QPushButton{background-color:rgba(0,0,0,0);border:0px;} QPushButton:pressed{background-color:rgba(0,0,0,60);}')
         b.setFocusPolicy(Qt.FocusPolicy.NoFocus)
         b.setAutoRepeat(False)
         if keycode is None:
