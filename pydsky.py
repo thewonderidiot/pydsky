@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 import sys
-from PySide2.QtWidgets import QApplication, QMainWindow, QStyleOption, QStyle, QPushButton
-from PySide2.QtGui import QPainter, QPixmap
-from PySide2.QtCore import Qt, QTimer, QByteArray
-from PySide2.QtNetwork import QTcpSocket
+from qtpy.QtWidgets import QApplication, QMainWindow, QStyleOption, QStyle, QPushButton
+from qtpy.QtGui import QPainter, QPixmap
+from qtpy.QtCore import Qt, QTimer, QByteArray
+from qtpy.QtNetwork import QTcpSocket
 
 import resources
 from lamp import Lamp
@@ -279,7 +279,7 @@ class DSKY(QMainWindow):
 
     def paintEvent(self, event):
         opt = QStyleOption()
-        opt.init(self)
+        opt.initFrom(self)
         p = QPainter(self)
         self.style().drawPrimitive(QStyle.PE_Widget, opt, p, self)
 
@@ -351,5 +351,5 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
     window = DSKY(None)
     window.show()
-    app.exec_()
+    app.exec()
 

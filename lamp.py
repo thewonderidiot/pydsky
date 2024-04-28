@@ -1,5 +1,5 @@
-from PySide2.QtWidgets import QWidget
-from PySide2.QtGui import QPainter
+from qtpy.QtWidgets import QWidget
+from qtpy.QtGui import QPainter
 
 class Lamp(QWidget):
     def __init__(self, parent, pix, x, y, w, h, on):
